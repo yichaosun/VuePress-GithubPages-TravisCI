@@ -24,6 +24,7 @@ module.exports = {
     sidebarDepth: 2, //侧边栏深度
     //侧边栏
     sidebar: [
+	["/pages/test.md", "测试"]
     ],
 
     // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
