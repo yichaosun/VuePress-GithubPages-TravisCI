@@ -1,7 +1,7 @@
 module.exports = {
   base: "/VuePress-GithubPages-TravisCI/", //目录根地址，应与Github仓库名字相同
-  title: "VuePress + GithubPages + TravisCI", // 显示在左上角的网页名称以及首页在浏览器标签显示的title名称
-  description: "创建 VuePress + GithubPages + TravisCI 在线文档", // meta 中的描述文字，用于SEO
+  title: "Yichao Personal Pages", // 显示在左上角的网页名称以及首页在浏览器标签显示的title名称
+  description: "浏览 Yichao 的个人文档", // meta 中的描述文字，用于SEO
   head: [
     [
       "link",
@@ -19,7 +19,6 @@ module.exports = {
     //导航栏
     nav: [
       //链接页面链接的根地址为/docs
-      { text: "博客", link: "https://tsanfer.xyz" }
     ],
     sidebarDepth: 2, //侧边栏深度
     //侧边栏
