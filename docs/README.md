@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: https://cdn-image.tsanfer.xyz/img/vuepress_githubpages_travisCI.svg
+heroImage: https://www.duxiaoman.com/static/fe-duxiaoman/static/images/logo.png
 actionText: 快速上手 →
 actionLink: /pages/test.md
 features:
