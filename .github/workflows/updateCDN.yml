@@ -19,5 +19,5 @@ jobs:
     steps:
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: curl --location --request GET 'https://cdn.jsdelivr.net/gh/yichaosun/VuePress-GithubPages-TravisCI@publishment/testData.json'
+        run: curl --location --request GET 'https://purge.jsdelivr.net/gh/yichaosun/VuePress-GithubPages-TravisCI@publishment/testData.json'
 
