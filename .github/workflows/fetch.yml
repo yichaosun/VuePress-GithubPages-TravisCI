@@ -22,9 +22,9 @@ jobs:
         run: pip install -r ${{ github.workspace }}/flutter_demo/requirements.txt
       - name: Run pa.python
         run: |
-	  curl www.baidu.com
-	  curl --location --request GET 'http://v3.wufazhuce.com:8000/api/essay/detail/5303_endUrl'
-	  python ${{ github.workspace }}/flutter_demo/main.py
+          curl www.baidu.com
+          curl --location --request GET 'http://v3.wufazhuce.com:8000/api/essay/detail/5303_endUrl'
+          python ${{ github.workspace }}/flutter_demo/main.py
       - name: list
         run: ls
       - name: Upload to this repo
