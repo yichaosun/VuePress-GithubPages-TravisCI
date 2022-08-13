@@ -19,7 +19,7 @@ jobs:
         with:
           python-version: '3.8'
       - name: cd py dir
-        run: | 
+        run: |
 	  cd ${{ github.workspace }}/flutter_demo
 	  pwd
       - name: Install Dependence
