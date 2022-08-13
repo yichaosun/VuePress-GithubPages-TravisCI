@@ -15,7 +15,7 @@ jobs:
         with:
           ref: publishment
       - name: cd py dir
-        run: cd ${{ github.repository }}/flutter_demo
+        run: cd ${{ github.workspace }}/flutter_demo
       - name: Setup Python environment
         uses: actions/setup-python@v2
         with:
