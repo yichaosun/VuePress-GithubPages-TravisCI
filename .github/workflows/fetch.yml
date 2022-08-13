@@ -1,0 +1,33 @@
+name: "fetch"
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  push:
+
+jobs:
+  job_1:
+    name: fetch message and assemble
+    runs-on:  ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: publishment
+      - name: clear previous
+        run: cd flutter_demo
+      - name: Setup Python environment
+        uses: actions/setup-python@v2
+	with:
+	  python-version: '3.8'
+      - name: Install Dependence
+        run: pip install -r requirements.txt
+      - name: Run pa.python
+        run: python pa.py
+      - name: list
+        run: ls
+      - name: Upload to this repo
+        run: |
+          git add "*.jpg" && echo "Git added"
+          git commit -m "upload" && echo "Git commited"
+          git push -u orogin runner && echo "Git Pushed Origin"

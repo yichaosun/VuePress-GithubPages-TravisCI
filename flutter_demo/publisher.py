@@ -1,0 +1,23 @@
+#!/usr/bin/env python3
+
+from contentProvider.sixsProvider import *
+
+
+class Publisher:
+	providers = []
+	
+	def __init__(self):
+		
+		sixp = SixsProvider("60s")
+		self.providers.append(sixp)
+	
+	
+	def provide(self,biz):
+		for p in self.providers:
+			if p.support(biz):
+				return p.provide()
+			
+if __name__ == "__main__":
+	publisher = Publisher()
+	print(publisher.provide('60s'))
+		
