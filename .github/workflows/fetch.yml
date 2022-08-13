@@ -24,6 +24,7 @@ jobs:
         run: |
           curl www.baidu.com
           curl --location --request GET 'http://v3.wufazhuce.com:8000/api/essay/detail/5303_endUrl'
+          curl --location --request GET 'https://api.vvhan.com/api/60s?type=json'
           python ${{ github.workspace }}/flutter_demo/main.py
       - name: list
         run: ls
