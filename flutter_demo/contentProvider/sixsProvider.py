@@ -23,6 +23,7 @@ class SixsProvider(Provider):
 	def getUrl(self,url):
 		headers = {'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:98.0) Gecko/20100101 Firefox/98.0'}
 		response = requests.get(url=url,headers=headers)
+		print(response.text)
 		data = json.loads(response.text)["data"]
 		return data
 	
