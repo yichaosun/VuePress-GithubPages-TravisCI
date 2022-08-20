@@ -31,4 +31,4 @@ jobs:
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com" # Change to your GitHub email address
           git add "." && echo "Git added"
           git commit -m "upload" && echo "Git commited"
-          git push -u orogin runner && echo "Git Pushed Origin"
+          git push -u origin publishment && echo "Git Pushed Origin"
