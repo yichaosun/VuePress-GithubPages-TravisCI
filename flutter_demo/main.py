@@ -15,10 +15,10 @@ if __name__ == "__main__":
 		}
 	]
 	print(response.toJson())
-	path = './pub'
+	path = 'pub'
 	cd = CDNFileGenerator()
 	idx = cd.index()
 	
-	f = open("{}/{}.json".format(path,idx),'w')
+	f = open("flutter_demo/{}/{}.json".format(path,idx),'w')
 	f.write(response.toJson())
 	f.close()

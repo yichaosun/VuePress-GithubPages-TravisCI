@@ -27,6 +27,6 @@ jobs:
         run: ls
       - name: Upload to this repo
         run: |
-          git add "*" && echo "Git added"
+          git add "." && echo "Git added"
           git commit -m "upload" && echo "Git commited"
           git push -u orogin runner && echo "Git Pushed Origin"
