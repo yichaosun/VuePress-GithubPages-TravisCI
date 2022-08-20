@@ -27,6 +27,8 @@ jobs:
         run: ls
       - name: Upload to this repo
         run: |
+          git config --global user.name "github-actions" # Change to your GitHub user name
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com" # Change to your GitHub email address
           git add "." && echo "Git added"
           git commit -m "upload" && echo "Git commited"
           git push -u orogin runner && echo "Git Pushed Origin"
