@@ -22,13 +22,11 @@ jobs:
         run: pip install -r ${{ github.workspace }}/flutter_demo/requirements.txt
       - name: Run pa.python
         run: |
-          curl --location --request GET 'https://api.vvhan.com/api/60s?type=json'
-          curl --location --request GET 'https://www.mxnzp.com/api/holiday/recent/list'
           python ${{ github.workspace }}/flutter_demo/main.py
       - name: list
         run: ls
       - name: Upload to this repo
         run: |
-          git add "*.jpg" && echo "Git added"
+          git add "*" && echo "Git added"
           git commit -m "upload" && echo "Git commited"
           git push -u orogin runner && echo "Git Pushed Origin"
