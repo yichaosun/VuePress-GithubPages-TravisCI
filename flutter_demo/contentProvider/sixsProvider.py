@@ -14,18 +14,12 @@ class SixsProvider(Provider):
 
 	url = 'https://api.vvhan.com/api/60s?type=json'
 	
-	def __init__(self,biz):
-		self.biz = biz
+	def __init__(self):
+		self.biz = "60s"
 	
 	def support(self,biz):
 		return self.biz == biz
 	
-	def getUrl(self,url):
-		headers = {'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:98.0) Gecko/20100101 Firefox/98.0'}
-		response = requests.get(url=url,headers=headers)
-		print(response.text)
-		data = json.loads(response.text)["data"]
-		return data
 	
 	def provide(self):
 		publish = []
@@ -34,8 +28,17 @@ class SixsProvider(Provider):
 			for i in data:
 				publish.extend(self.assembleSingleItem(i))
 		return publish
-		
-		
+	
+	def assemble(self,params):
+		return self.provide()
+	
+	def getUrl(self,url):
+		headers = {'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:98.0) Gecko/20100101 Firefox/98.0'}
+		response = requests.get(url=url,headers=headers)
+#		print(response.text)
+		data = json.loads(response.text)["data"]
+		return data
+	
 	def assembleSingleItem(self,item):
 		itemList = []
 		messages=item.split(";");

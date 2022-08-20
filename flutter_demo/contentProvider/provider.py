@@ -10,4 +10,8 @@ class Provider(abc.ABC):
 	@abc.abstractmethod
 	def provide(self):
 		pass
+		
+	@abc.abstractmethod
+	def assemble(self,params):
+		pass
 

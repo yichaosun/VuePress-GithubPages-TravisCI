@@ -2,16 +2,23 @@
 
 from publisher import *
 from response import *
+from util.cdnGenerator import *
 
 if __name__ == "__main__":
 	publisher = Publisher()
-	pubCard = publisher.provide('60s')
-	card = {
-		'id':1,
-		'content':pubCard
-	}
+	pubCard2 = publisher.provide('holiday')
 	response = Response(0)
 	response.data['list']=[
-		card
+		{
+			'id':1,
+			'content':pubCard2
+		}
 	]
 	print(response.toJson())
+	path = './pub'
+	cd = CDNFileGenerator()
+	idx = cd.index()
+	
+	f = open("{}/{}.json".format(path,idx),'w')
+	f.write(response.toJson())
+	f.close()
